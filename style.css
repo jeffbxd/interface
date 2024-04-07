@@ -1,0 +1,171 @@
+
+O seu código CSS parece estar bem organizado e bem estruturado para o propósito descrito. No entanto, observei que você tem uma seção duplicada relacionada à configuração do corpo (body) da página, especificamente em relação ao fundo da página. Vou ajustar o código para você, removendo a duplicação e garantindo que o caminho para a imagem de fundo esteja correto, considerando que você mencionou que a imagem foi renomeada para background.jpg e está localizada dentro da pasta images.
+
+Aqui está a versão ajustada do seu CSS para garantir que a imagem de fundo seja aplicada corretamente e para evitar duplicidades:
+
+css
+Copy code
+/* reset.css */
+
+/* Normalizar a margem e o preenchimento do elemento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../images/background.jpg'); /* Verifique o caminho conforme a estrutura do seu projeto */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Estilos para a seção principal */
+section {
+    position: relative;
+    max-width: 400px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+/* Estilos para o formulário */
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+  
+
+/* Estilos para a caixa de entrada */
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+  
+    /* Configuração da borda inferior do inputbox */
+    border-bottom: 2px solid #fff;
+}
+  
+  
+/* Estilos para o ícone dentro do inputbox */
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+  
+input:focus ~ label,
+  input:focus ~ label {
+        top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff
+}
+  
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+
+
+.forget {
+    margin: 35px 0;
+    font-size: 0.85rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget {
+    display: flex;
+    align-items: center;
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+button {
+
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255,255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    
+}
+
+button:hover {
+
+    background-color: rgb(255, 255,255, 0.5);
+
+}
+ 
+.register { 
+    
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+
+}
+  
+.register p a {
+
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.register p a:hover { 
+
+    text-decoration: underline;
+
+}
